@@ -1,0 +1,16 @@
+FROM hub.docker.com/r/apache/nifi/
+MAINTAINER Ahmed Werghi "ahmed.werghi@oscaro.com"
+
+
+RUN rm -rf /opt/nifi/nifi-current/lib/logback-* && \
+    rm -rf /opt/nifi/nifi-current/lib/slf4j-api-* && \
+    
+
+COPY libs/logback-json* /opt/nifi/nifi-current/lib/
+COPY libs/logback* /opt/nifi/nifi-current/lib/
+COPY libs/slf4j-* /opt/nifi/nifi-current/lib/
+COPY libs/jackson* /opt/nifi/nifi-current/lib/
+COPY files/ /
+
+
+EXPOSE 8080
