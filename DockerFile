@@ -3,7 +3,7 @@ MAINTAINER Ahmed Werghi "ahmed.werghi@oscaro.com"
 
 
 RUN rm -rf /opt/nifi/nifi-current/lib/logback-* && \
-    rm -rf /opt/nifi/nifi-current/lib/slf4j-api-* && \
+    rm -rf /opt/nifi/nifi-current/lib/slf4j-api-*
     
 
 COPY libs/logback-json* /opt/nifi/nifi-current/lib/
