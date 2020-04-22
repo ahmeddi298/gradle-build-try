@@ -1,4 +1,4 @@
-FROM hub.docker.com/r/apache/nifi/
+FROM apache/nifi:1.11.4
 MAINTAINER Ahmed Werghi "ahmed.werghi@oscaro.com"
 
 

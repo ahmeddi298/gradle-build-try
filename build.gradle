@@ -28,8 +28,8 @@ repositories {
 
 dependencies {
      libs group: 'ch.qos.logback', name: 'logback-classic', version: '1.2.3'
-     libs group: 'ch.qos.logback.contrib', name: 'logback-jackson', version: ${logback.contrib.version}
-     libs group: 'ch.qos.logback.contrib', name: 'logback-json-classic', version: ${logback.contrib.version}
+     libs group: 'ch.qos.logback.contrib', name: 'logback-jackson', version: '0.1.5'
+     libs group: 'ch.qos.logback.contrib', name: 'logback-json-classic', version: '0.1.5'
      libs group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.5'
      libs group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
 }
@@ -39,7 +39,7 @@ task downloadLibs(type: Copy, group: 'build', description: 'Copies the libraries
     from configurations.libs
 }
 
-task clean {
+task cleaner {
     doLast {
         delete 'libs'
     }
